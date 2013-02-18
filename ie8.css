@@ -1,0 +1,23 @@
+
+#nav{
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
+}
+.nav_menu li div:hover{
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000')";
+}
+#cont{
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#50000000',endColorstr='#50000000')";
+}#bar2{
+     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#90F320B7',endColorstr='#90F320B7')";
+ }
+.bar2_2 .T_th{
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbbbbbb',endColorstr='#ff898989');
+}
+
+#shadow{
+    top:-25px;
+    left: -35px;
+}
+#bar2 .bar2_1 .ic_cal{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='./images/Date_Manager.png', sizingMethod='scale');
+}

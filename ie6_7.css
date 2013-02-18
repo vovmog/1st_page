@@ -1,0 +1,65 @@
+.justify {
+    text-align: justify;
+    /* Лекарство для IE6-7*/
+    text-justify: newspaper;
+    zoom:1;
+}
+
+.justify li {
+    /* эмуляция inline-block для IE6-7*/
+    display : inline;
+    zoom : 1;
+}#logo{
+     text-align: left;
+     display : inline;
+     zoom : 1;
+ }
+.logo_mycompany{
+    text-align: left;
+}
+.logo_mycompany span{
+    cursor: pointer;
+}
+#nav{
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');/*ie7 */
+}
+.nav_menu li div:hover{
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000',endColorstr='#40000000');/*ie7 */
+}
+#cont{
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#50000000',endColorstr='#50000000');/*ie7 */
+}
+#bar2{
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#90F320B7',endColorstr='#90F320B7');/*ie7 */
+}
+.bar2_2 .T_th{
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbbbbbb',endColorstr='#ff898989');
+}
+.bar2_2 .T_line{
+    height: auto;
+}
+#shadow{
+    position: absolute;
+    top: auto;
+    left: -35px;
+    bottom: -25px;
+
+}
+#bar2 .bar2_1 div,#bar2 .bar2_1 div p{
+    display: inline;
+    zoom: 1;
+}
+#bar2 .bar2_1 .ic_cal{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='./images/Date_Manager.png', sizingMethod='scale');
+}
+
+.last_ch{
+    height: 30px;
+    width: 30px;
+    margin: 90px 0 0 ;
+    box-shadow: 0 0 0 ;
+    border: 0;
+    float: left;
+    background: url("./images/right_b.png");
+    background-size: 100% 100%;
+}

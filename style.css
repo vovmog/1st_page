@@ -1,9 +1,10 @@
 html, body {
     height: 100%;
+    width: 100%;
     min-height: 100%;
     background-color: rgb(42, 38, 87);
 }
-h1,h2,h3,h4,p,td,th{
+html,body, h1,h2,h3,h4,p,td,th{
     margin: 0;
     padding: 0;
     color: white;
@@ -26,9 +27,10 @@ h1,h2,h3,h4,p,td,th{
     margin: 0 auto;
 }
 
-#nav {
+#nav {/*
+    position: relative;*/
     height: 60px;
-    background-color: RGBA(0, 0, 0, 0.4);
+    background: RGBA(0, 0, 0, 0.4);
     border-bottom: 1px solid black;
 }
 
@@ -105,11 +107,14 @@ h1,h2,h3,h4,p,td,th{
 
 .nav_menu li div a:hover {
     background: RGBA(0, 0, 0, 0.4);
+
     border-top: 1px solid #aea6ad;
     border-radius: 3px;
 }
 
 #logo {
+    position: relative;
+    z-index: 3;
     display: inline-block;
     height: 74px;
     width: 69px;
@@ -121,9 +126,9 @@ h1,h2,h3,h4,p,td,th{
 }
 
 #logo_company a {
-    display: block;
     height: 20px;
     color: white;
+    overflow: visible;
 }
 
 #logo_company a:hover #logo_text {
@@ -165,6 +170,8 @@ h1,h2,h3,h4,p,td,th{
     background-size: 100% 100%;
 }
     #slide_bar{
+        position: relative;
+        z-index: 0;
         height: 338px;
         width: 920px;
         margin: 45px auto 0;
@@ -178,16 +185,17 @@ h1,h2,h3,h4,p,td,th{
             font-family: Verdana;
             font-size: 35px;
         }
-        #slide_bar #cont{
+        #cont{
             max-width: 570px;
             min-width: 300px;
             height:120px;
             border-radius: 8px;
+
             background-color: rgba(0, 0, 0, 0.2);
             float: right;
             box-shadow: 0 0 4px rgba(252, 170, 170, 0.5);
         }
-            #slide_bar #cont p{
+            #cont p{
                 margin: 0;
                 padding: 25px 70px 0 20px;
                 color: white;
@@ -197,6 +205,7 @@ h1,h2,h3,h4,p,td,th{
             }
         #slide_bar img{
             margin: 20px 0 0 500px;
+            border: none;
         }
 
 
@@ -220,7 +229,7 @@ h1,h2,h3,h4,p,td,th{
     height: 1005px;
     background: url("./images/main_content.png");
     background-size: 100% 100%;
-    background-position: center bottom;
+    background-position: left bottom;
 }
 #blocks .spacer2{
     width: 985px;
@@ -373,7 +382,8 @@ h1,h2,h3,h4,p,td,th{
 
 #bar2 {
     height: 270px;
-    background-color: hsla(317, 90%, 54%, 0.6);
+    background:rgba(243, 32, 183, 0.600);
+   /* background-color: hsla(317, 90%, 54%, 0.6);*/
     /*background: url("./images/back.png");*/
     /*background-color: rgba(255, 34, 175, 0.57);*/
 }
@@ -478,8 +488,6 @@ h1,h2,h3,h4,p,td,th{
     background-image: -o-linear-gradient(top, #BBBBBB 32%, #898989 100%);
     background-image: -moz-linear-gradient(top, #BBBBBB 32%, #898989 100%);
     background-image: -webkit-linear-gradient(top, #BBBBBB 32%, #898989 100%);
-    background-image: -ms-linear-gradient(top, #BBBBBB 32%, #898989 100%);
-
     background-image: -webkit-gradient(
         linear,
         left top,
@@ -487,6 +495,8 @@ h1,h2,h3,h4,p,td,th{
         color-stop(0.32, #BBBBBB),
         color-stop(1, #898989)
     );
+    background: -ms-linear-gradient(top, #BBBBBB 32%, #898989 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbbbbbb',endColorstr='#ff898989');
 }
 .bar2_2 .T_line{
     height: 35px;
@@ -542,7 +552,7 @@ h1,h2,h3,h4,p,td,th{
     left:-40px;
     width: 540px;
     height: 60px;
-    background: url("./images/shadow.png");
+    background: url("./images/shadow.png") no-repeat;
     background-size: 100% 100%;
     z-index: -1;
 }
@@ -558,27 +568,32 @@ h1,h2,h3,h4,p,td,th{
     background-size: 100% 100%;
 }
 #main_content_slide_bar .cont_slide{
-    width: 855px;
-    height: 125px;
+    position: relative;
+    width: 908px;
+    height: 135px;
     float: left;
-    margin-left: 25px;
-    margin-right: 25px;
     margin-top: 35px;
+    overflow: hidden;
 }
-#main_content_slide_bar .cont_slide>div{
-    width: 185px;
+#wrap_slide div{
+    width: 186px;
     height: 125px;
     border-radius:5px ;
     border: 1px solid #434a52;
     background: #cdcece;
     box-shadow: 0 2px 10px black;
     float: left;
-    margin-left: 35px;
+    margin-left: 36px;
 }
-#main_content_slide_bar .cont_slide>div:first-child{
+#wrap_slide div h2{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+#main_content_slide_bar .cont_slide .first_ch{
     margin-left: 0;
 }
-#main_content_slide_bar .cont_slide>div:last-child{
+#main_content_slide_bar .cont_slide .last_ch{
     margin-right: 0;
 }
 #main_content_slide_bar div a{
@@ -586,35 +601,37 @@ h1,h2,h3,h4,p,td,th{
     width: 100%;
     height: 100%;
 }
-#main_content_slide_bar>div:first-child,#main_content_slide_bar>div:last-child{
+#main_content_slide_bar .first_ch,#main_content_slide_bar .last_ch{
     height: 30px;
     width: 30px;
     margin: 90px 0 0 ;
     box-shadow: 0 0 0 ;
     border: 0;
 }
-#main_content_slide_bar>div:first-child{
+#main_content_slide_bar .first_ch{
     float: left;
     background: url("./images/left_b.png");
     background-size: 100% 100%;
 }
-#main_content_slide_bar>div:last-child{
+#main_content_slide_bar .last_ch{
     float: left;
     background: url("./images/right_b.png");
     background-size: 100% 100%;
-}
-
+}#wrap_slide{
+    left: -908px;
+    width:3584px ;
+    position: relative;
+    }
 
 /*/////////////////////////////////////////////////////////////*/
 
 
 #footer {
     height: 175px;
-    background: url("./images/footer_bar2.png");
-    background-size: 100% 100%;
 }
 
 #footer #foot_bar1 {
+    position: relative;
     height: 130px;
     background: url("./images/footer_bar.png");
     background-size: 100% 100%;
@@ -676,6 +693,8 @@ h1,h2,h3,h4,p,td,th{
 #foot_bar2 {
     height: 48px;
     text-align: center;
+    background: url("./images/footer_bar2.png");
+    background-size: 100% 100%;
 }
 #foot_bar2 p{
     font-family: Arial;
